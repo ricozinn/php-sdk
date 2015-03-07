@@ -56,16 +56,16 @@ class Field
 
 	public static function Type($flow, $type)
 	{
-		return self::$sdk->fields('flow/'.$flow.'/types', $type, 'options', 'options');
+		return self::$sdk->fields('flow/'.$flow.'/type', $type, 'options', 'options');
 	}
 
 	public static function Options($flow, $slug)
 	{
-		return self::$sdk->fields('flow/'.$flow.'/fields', $slug, 'options', 'options');
+		return self::$sdk->fields('flow/'.$flow.'/field', $slug, 'options', 'options');
 	}
 
 	public static function Delete($flow, $slug)
 	{
-		return self::$sdk->delete('flow/'.$flow.'/fields/'.$slug);
+		return self::$sdk->delete('flow/'.$flow.'/field/'.$slug);
 	}
 }
