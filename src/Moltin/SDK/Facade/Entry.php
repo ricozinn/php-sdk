@@ -31,7 +31,7 @@ class Entry
 
 	public static function Get($flow, $id)
 	{
-		return self::$sdk->get('flows/'.$flow.'/entries/'.$id);
+		return self::$sdk->get('flow/'.$flow.'/entry/'.$id);
 	}
 
 	public static function Find($flow, $terms = array())
@@ -46,21 +46,21 @@ class Entry
 
 	public static function Create($flow, $data)
 	{
-		return self::$sdk->post('flows/'.$flow.'/entries', $data);
+		return self::$sdk->post('flows/'.$flow.'/entry', $data);
 	}
 
 	public static function Update($flow, $id, $data)
 	{
-		return self::$sdk->put('flows/'.$flow.'/entries/'.$id, $data);
+		return self::$sdk->put('flows/'.$flow.'/entry/'.$id, $data);
 	}
 
 	public static function Fields($flow = null, $id)
 	{
-		return self::$sdk->fields('flows/'.$flow.'/entries', $id);
+		return self::$sdk->fields('flows/'.$flow.'/entry', $id);
 	}
 
 	public static function Delete($flow, $id)
 	{
-		return self::$sdk->delete('flows/'.$flow.'/entries/'.$id);
+		return self::$sdk->delete('flows/'.$flow.'/entry/'.$id);
 	}
 }

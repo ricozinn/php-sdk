@@ -31,12 +31,12 @@ class File
 
 	public static function Get($id)
 	{
-		return self::$sdk->delete('files/'.$id);
+		return self::$sdk->delete('file/'.$id);
 	}
 
 	public static function Upload($id, $file, $mime = null, $name = null)
 	{
-        return self::$sdk->post('files', [
+        return self::$sdk->post('file', [
             'file'      => new \CurlFile($file, $mime, $name),
             'name'      => $name,
             'assign_to' => $id
@@ -45,12 +45,12 @@ class File
 
 	public static function Delete($id)
 	{
-		return self::$sdk->delete('files/'.$id);
+		return self::$sdk->delete('file/'.$id);
 	}
 
 	public static function Order($data)
 	{
-		return self::$sdk->put('files/order', $data);
+		return self::$sdk->put('file/order', $data);
 	}
 
 }

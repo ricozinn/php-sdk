@@ -24,7 +24,7 @@ class Language
 {
 	use \Moltin\SDK\FacadeTrait;
 
-	protected static $single = 'languages';
+	protected static $single = 'language';
 	protected static $plural = 'languages';
 
 	public static function Set($code)

@@ -31,7 +31,7 @@ class Gateway
 
 	public static function Get($slug)
 	{
-		return self::$sdk->get('gateways/'.$slug);
+		return self::$sdk->get('gateway/'.$slug);
 	}
 
 	public static function Listing()
@@ -41,21 +41,21 @@ class Gateway
 
 	public static function Fields($slug = null)
 	{
-		return self::$sdk->fields('gateways', $slug);
+		return self::$sdk->fields('gateway', $slug);
 	}
 
 	public static function Update($slug, $data)
 	{
-		return self::$sdk->put('gateways/'.$slug, $data);
+		return self::$sdk->put('gateway/'.$slug, $data);
 	}
 
 	public static function Enable($slug)
 	{
-		return self::$sdk->get('gateways/'.$slug.'/enable');
+		return self::$sdk->get('gateway/'.$slug.'/enable');
 	}
 
 	public static function Disable($slug)
 	{
-		return self::$sdk->get('gateways/'.$slug.'/disable');
+		return self::$sdk->get('gateway/'.$slug.'/disable');
 	}
 }

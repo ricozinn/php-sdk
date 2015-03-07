@@ -31,26 +31,26 @@ class Email
 
 	public static function Get($slug)
 	{
-		return self::$sdk->get('emails/'.$slug);
+		return self::$sdk->get('email/'.$slug);
 	}
 
 	public static function Listing($terms = array())
 	{
-		return self::$sdk->get('emails', $terms);
+		return self::$sdk->get('email', $terms);
 	}
 
 	public static function Create($data)
 	{
-		return self::$sdk->post('emails', $data);
+		return self::$sdk->post('email', $data);
 	}
 
 	public static function Update($slug, $data)
 	{
-		return self::$sdk->put('emails/'.$slug, $data);
+		return self::$sdk->put('email/'.$slug, $data);
 	}
 
 	public static function Delete($slug)
 	{
-		return self::$sdk->delete('emails/'.$slug);
+		return self::$sdk->delete('email/'.$slug);
 	}
 }

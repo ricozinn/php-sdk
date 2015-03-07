@@ -31,26 +31,26 @@ class Modifier
 
 	public static function Get($product, $modifier)
 	{
-		return self::$sdk->get('products/'.$product.'/modifiers/'.$modifier);
+		return self::$sdk->get('product/'.$product.'/modifier/'.$modifier);
 	}
 
 	public static function Create($product, $data)
 	{
-		return self::$sdk->post('products/'.$product.'/modifiers', $data);
+		return self::$sdk->post('product/'.$product.'/modifier', $data);
 	}
 
 	public static function Update($product, $modifier, $data)
 	{
-		return self::$sdk->put('products/'.$product.'/modifiers/'.$modifier, $data);
+		return self::$sdk->put('product/'.$product.'/modifier/'.$modifier, $data);
 	}
 
 	public static function Fields($product, $modifier = null)
 	{
-		return self::$sdk->fields('products/'.$product.'/modifiers'. (($modifier) ? '/'.$modifier : '') );
+		return self::$sdk->fields('product/'.$product.'/modifier'. (($modifier) ? '/'.$modifier : '') );
 	}
 
 	public static function Delete($product, $modifier)
 	{
-		return self::$sdk->delete('products/'.$product.'/modifiers/'.$modifier);
+		return self::$sdk->delete('product/'.$product.'/modifier/'.$modifier);
 	}
 }
