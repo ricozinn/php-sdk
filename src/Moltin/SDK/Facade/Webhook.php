@@ -49,6 +49,11 @@ class Webhook
 		return self::$sdk->put('webhook/'.$id, $data);
 	}
 
+	public static function Fields($id = null)
+	{
+		return self::$sdk->fields('webhook', $id);
+	}
+
 	public static function Delete($id)
 	{
 		return self::$sdk->delete('webhook/'.$id);
