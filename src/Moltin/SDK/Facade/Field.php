@@ -31,17 +31,17 @@ class Field
 
 	public static function Get($slug)
 	{
-		return self::$sdk->get('flows/'.$slug);
+		return self::$sdk->get('flow/'.$slug);
 	}
 
 	public static function Create($flow, $data)
 	{
-		return self::$sdk->post('flows/'.$flow.'/field', $data);
+		return self::$sdk->post('flow/'.$flow.'/field', $data);
 	}
 
 	public static function Update($flow, $slug, $data)
 	{
-		return self::$sdk->put('flows/'.$flow.'/field/'.$slug, $data);
+		return self::$sdk->put('flow/'.$flow.'/field/'.$slug, $data);
 	}
 
 	public static function Fields($slug = null)
