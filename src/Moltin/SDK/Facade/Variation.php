@@ -31,26 +31,26 @@ class Variation
 
 	public static function Get($product, $modifier, $id)
 	{
-		return self::$sdk->get('products/'.$product.'/modifiers/'.$modifier.'/variations/'.$id);
+		return self::$sdk->get('product/'.$product.'/modifier/'.$modifier.'/variation/'.$id);
 	}
 
 	public static function Create($product, $modifier, $data)
 	{
-		return self::$sdk->post('products/'.$product.'/modifiers/'.$modifier.'/variations', $data);
+		return self::$sdk->post('product/'.$product.'/modifier/'.$modifier.'/variations', $data);
 	}
 
 	public static function Update($product, $modifier, $id, $data)
 	{
-		return self::$sdk->put('products/'.$product.'/modifiers/'.$modifier.'/variations/'.$id, $data);
+		return self::$sdk->put('product/'.$product.'/modifier/'.$modifier.'/variation/'.$id, $data);
 	}
 
 	public static function Fields($product, $modifier, $id = null)
 	{
-		return self::$sdk->fields('products/'.$product.'/modifiers/'.$modifier.'/variations'. (($id) ? '/'.$id : '') );
+		return self::$sdk->fields('product/'.$product.'/modifier/'.$modifier.'/variation'. (($id) ? '/'.$id : '') );
 	}
 
 	public static function Delete($product, $modifier, $id)
 	{
-		return self::$sdk->delete('products/'.$product.'/modifiers/'.$modifier.'/variations/'.$id);
+		return self::$sdk->delete('product/'.$product.'/modifier/'.$modifier.'/variation/'.$id);
 	}
 }
