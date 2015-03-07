@@ -36,7 +36,7 @@ class Flow
 
 	public static function Listing($terms = array())
 	{
-		return self::$sdk->get('flow', $terms);
+		return self::$sdk->get('flows', $terms);
 	}
 
 	public static function Create($data)
