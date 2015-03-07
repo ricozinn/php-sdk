@@ -61,6 +61,6 @@ trait FacadeTrait
 
 	public static function Fields($id = null)
 	{
-		return self::$sdk->fields(self::$plural.'', $id);
+		return self::$sdk->fields(self::$single.'', $id);
 	}
 }
