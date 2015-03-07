@@ -51,7 +51,7 @@ class Field
 
 	public static function Types()
 	{
-		return self::$sdk->get('flow/types');
+		return self::$sdk->get('flows/types');
 	}
 
 	public static function Type($flow, $type)
