@@ -36,7 +36,7 @@ class Variation
 
 	public static function Create($product, $modifier, $data)
 	{
-		return self::$sdk->post('product/'.$product.'/modifier/'.$modifier.'/variations', $data);
+		return self::$sdk->post('product/'.$product.'/modifier/'.$modifier.'/variation', $data);
 	}
 
 	public static function Update($product, $modifier, $id, $data)
