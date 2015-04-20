@@ -217,10 +217,10 @@ class SDK
                         $error .= "\n".$e;
                     }
                 }
-            } elseif (isset($result['error']) && is_array($result['error'])) {
-                $error = implode("\n", $result['error']);
+            } elseif (isset($result['errors']) && is_array($result['errors'])) {
+                $error = implode("\n", $result['errors']);
             } else {
-                $error = $result['error'];
+                $error = $result['errors'];
             }
 
             throw new InvalidResponse($error);
