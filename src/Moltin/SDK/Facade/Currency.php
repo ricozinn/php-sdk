@@ -24,7 +24,7 @@ class Currency
 {
 	use \Moltin\SDK\FacadeTrait;
 
-	protected static $single = 'currencies';
+	protected static $single = 'currency';
 	protected static $plural = 'currencies';
 
 	public static function Set($code)
