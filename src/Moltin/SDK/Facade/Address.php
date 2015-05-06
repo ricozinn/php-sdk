@@ -31,35 +31,35 @@ class Address
 
 	public static function Get($customer, $id)
 	{
-		return self::$sdk->get('customers/'.$customer.'/addresses/'.$id);
+		return self::$sdk->get('customer/'.$customer.'/address/'.$id);
 	}
 
 	public static function Create($customer, $data)
 	{
-		return self::$sdk->post('customers/'.$customer.'/addresses', $data);
+		return self::$sdk->post('customer/'.$customer.'/address', $data);
 	}
 
 	public static function Update($customer, $id, $data)
 	{
-		return self::$sdk->put('customers/'.$customer.'/addresses/'.$id, $data);
+		return self::$sdk->put('customer/'.$customer.'/address/'.$id, $data);
 	}
 
 	public static function Find($customer, $terms = array())
 	{
-		return self::$sdk->get('customers/'.$customer.'/addresses', $terms);
+		return self::$sdk->get('customer/'.$customer.'/addresses', $terms);
 	}
 
 	public static function Listing($customer, $terms = array())
 	{
-		return self::$sdk->get('customers/'.$customer.'/addresses', $terms);
+		return self::$sdk->get('customer/'.$customer.'/addresses', $terms);
 	}
 
 	public static function Fields($customer = null, $id = null)
 	{
-		$uri = 'customers';
+		$uri = 'customer';
 		
-		if ( $customer > 0 and $id === null ) { $uri .= '/'.$customer.'/addresses'; }
-		else if ( $customer > 0 and $id > 0 ) { $uri .= '/'.$customer.'/addresses/'.$id; }
+		if ( $customer > 0 and $id === null ) { $uri .= '/'.$customer.'/address'; }
+		else if ( $customer > 0 and $id > 0 ) { $uri .= '/'.$customer.'/address/'.$id; }
 
 		return self::$sdk->fields($uri);
 	}
