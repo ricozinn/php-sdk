@@ -26,7 +26,7 @@ use Moltin\SDK\Exception\InvalidResponseException as InvalidResponse;
 class SDK
 {
     // Paths
-    public $version  = 'beta';
+    public $version  = 'v1';
     public $url      = 'https://api.molt.in/';
     public $auth_url = 'http://auth.molt.in/';
 

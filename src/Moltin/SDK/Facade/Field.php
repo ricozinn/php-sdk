@@ -31,22 +31,22 @@ class Field
 
 	public static function Get($slug)
 	{
-		return self::$sdk->get('flow/'.$slug);
+		return self::$sdk->get('flows/'.$slug);
 	}
 
 	public static function Create($flow, $data)
 	{
-		return self::$sdk->post('flow/'.$flow.'/field', $data);
+		return self::$sdk->post('flows/'.$flow.'/fields', $data);
 	}
 
 	public static function Update($flow, $slug, $data)
 	{
-		return self::$sdk->put('flow/'.$flow.'/field/'.$slug, $data);
+		return self::$sdk->put('flows/'.$flow.'/fields/'.$slug, $data);
 	}
 
 	public static function Fields($slug = null)
 	{
-		return self::$sdk->fields('flow', $slug);
+		return self::$sdk->fields('flows', $slug);
 	}
 
 	public static function Types()
@@ -56,16 +56,16 @@ class Field
 
 	public static function Type($flow, $type)
 	{
-		return self::$sdk->fields('flow/'.$flow.'/type', $type, 'options', 'options');
+		return self::$sdk->fields('flows/'.$flow.'/type', $type, 'options', 'options');
 	}
 
 	public static function Options($flow, $slug)
 	{
-		return self::$sdk->fields('flow/'.$flow.'/field', $slug, 'options', 'options');
+		return self::$sdk->fields('flows/'.$flow.'/fields', $slug, 'options', 'options');
 	}
 
 	public static function Delete($flow, $slug)
 	{
-		return self::$sdk->delete('flow/'.$flow.'/field/'.$slug);
+		return self::$sdk->delete('flows/'.$flow.'/fields/'.$slug);
 	}
 }

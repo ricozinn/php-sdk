@@ -31,7 +31,7 @@ class Flow
 
 	public static function Get($slug)
 	{
-		return self::$sdk->get('flow/'.$slug);
+		return self::$sdk->get('flows/'.$slug);
 	}
 
 	public static function Listing($terms = array())
@@ -41,22 +41,22 @@ class Flow
 
 	public static function Create($data)
 	{
-		return self::$sdk->post('flow', $data);
+		return self::$sdk->post('flows', $data);
 	}
 
 	public static function Update($slug, $data)
 	{
-		return self::$sdk->put('flow/'.$slug, $data);
+		return self::$sdk->put('flows/'.$slug, $data);
 	}
 
 	public static function Fields($slug = null)
 	{
-		return self::$sdk->fields('flow', $slug);
+		return self::$sdk->fields('flows', $slug);
 	}
 
 	public static function Entries($slug = null, $terms = array())
 	{
-		return self::$sdk->get('flow/'.$slug.'/entries', $terms);
+		return self::$sdk->get('flows/'.$slug.'/entries', $terms);
 	}
 
 	public static function Types()
@@ -66,6 +66,6 @@ class Flow
 
 	public static function Delete($slug)
 	{
-		return self::$sdk->delete('flow/'.$slug);
+		return self::$sdk->delete('flows/'.$slug);
 	}
 }

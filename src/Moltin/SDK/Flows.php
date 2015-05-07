@@ -48,10 +48,11 @@ class Flows
                 // Setup args
                 $this->args = array(
                     'name'           => $field['slug'],
+                    'placeholder'    => $field['name'],
                     'id'             => $field['slug'],
                     'value'          => ( isset($_POST[$field['slug']]) ? $_POST[$field['slug']] : ( isset($field['value']) ? $field['value'] : null ) ),
                     'required'       => ( $field['required'] == 1 ? 'required' : false ),
-                    'class'          => ['form-control'],
+                    'class'          => ['form-control input-lg'],
                     'data-fieldtype' => $field['type']
                 );
 
@@ -125,6 +126,13 @@ class Flows
         $this->args['type']        = 'text';
         $this->args['class'][]     = 'decimal';
         $this->args['data-places'] = $a['options']['decimal_places'];
+
+        return '<input ' . $this->_buildArgs($this->args) . ' />';
+    }
+
+    protected function typeHidden($a)
+    {
+        $this->args['type']        = 'hidden';
 
         return '<input ' . $this->_buildArgs($this->args) . ' />';
     }
